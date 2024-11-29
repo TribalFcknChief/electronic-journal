@@ -1,13 +1,13 @@
 import { Grid2 } from "@mui/material";
 import styled from "styled-components";
-//import { Calendar } from "./components/StyledCalendar";
+import { Calendar } from "./components/StyledCalendar";
 
 export const ShedulePageWrapper = styled(Grid2)(() => ({
     width: "100vw",
     height: "100vh",
     overflowY: "hidden",
   }));
-/*
+
 export const StyledCalendar = styled(Calendar)({
     '.MuiPickersToolbar-root': {
       borderRadius: '2px',
@@ -18,4 +18,4 @@ export const StyledCalendar = styled(Calendar)({
     },
     '.MuiDateCalendar-root':{
     }
-  })*/
+  })

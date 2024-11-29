@@ -3,6 +3,7 @@ import { StyledTypography } from "../pages/RegistrationPage/style";
 import { SettingsIcon } from "../pages/ProfilePage/svg/settingsIcon";
 import { LogoutIcon } from "../pages/ProfilePage/svg/logoutIcon";
 import { NotificationIcon } from "../pages/ProfilePage/svg/notificationIcon";
+import BackgroundLetterAvatars from "../pages/ProfilePage/components/Avatar";
 
 
 export const StyledHeader = () => {
@@ -28,14 +29,7 @@ export const StyledHeader = () => {
             marginLeft: "50px",
           }}
         >
-          <Box
-            sx={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "100%",
-              border: "1px solid blue",
-            }}
-          ></Box>
+          <BackgroundLetterAvatars/>
           <StyledTypography
             sx={{ fontWeight: "600", color: "#343333", fontSize: "14px", marginLeft:"20px" }}
           >

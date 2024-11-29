@@ -1,11 +1,11 @@
 import { Box, Divider} from "@mui/material";
 import MenuStyled from "../../components/StyledMenu";
-import {  ShedulePageWrapper} from "./style";
+import {  ShedulePageWrapper, StyledCalendar} from "./style";
 import { StyledHeader } from "../../components/StyledHeader";
 import { StyledTypography } from "../RegistrationPage/style";
 import { CalendarIcon } from "../ProfilePage/svg/calendarIcon";
 import AccessibleTable from "./components/StyledTableEvents";
-
+import CalendarWithTable from "./Cal";
 
 export const ShedulePage = () => {
   return (
@@ -59,11 +59,8 @@ export const ShedulePage = () => {
             variant="middle"
             sx={{ marginTop: "10px", marginBottom: "10px" }}
           ></Divider>
-           
-              
-
-           <Box>
-            <AccessibleTable/>
+           <Box sx={{display:"flex", flexDirection:"row"}}>
+              <CalendarWithTable/>
            </Box>
          </Box>
       </Box>

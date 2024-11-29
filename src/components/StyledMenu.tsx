@@ -7,7 +7,6 @@ import { AttendanceIcon } from "../pages/ProfilePage/svg/attendanceIcon";
 import { WorkersIcon } from "../pages/ProfilePage/svg/workersIcon";
 import { GroupsIcon } from "../pages/ProfilePage/svg/groupsIcon";
 import { StudentIcon } from "../pages/ProfilePage/svg/studentIcon";
-import { GroupAutocompleteInput } from "./GroupAutocomplete";
 import { StyledTypography } from "../pages/RegistrationPage/style";
 
 function BasicSimpleTreeView() {
@@ -71,7 +70,6 @@ function BasicSimpleTreeView() {
                 <StyledTypography sx={{fontSize:"1rem"}}>Группы</StyledTypography>
                 <GroupsIcon />
                 </Box>
-                <GroupAutocompleteInput></GroupAutocompleteInput>
               </Box>
             </Box>
           }

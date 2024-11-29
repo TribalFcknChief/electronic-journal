@@ -18,9 +18,9 @@ function createData(
 }
 
 const rows = [
-  createData("12.10.2024", "12:00", "","важное", "День кафедры"),
-  createData("12.10.2024", "12:00", "","важное", "День кафедры"),
-  createData("12.10.2024", "12:00", "","важное", "День кафедры"),
+  createData("12.10.2024", "12:00", "","3", "День кафедры"),
+  createData("12.10.2024", "12:00", "","3", "День кафедры"),
+  createData("12.10.2024", "12:00", "","3", "День кафедры"),
 ];
 
 export default function AccessibleTable() {
@@ -30,11 +30,10 @@ export default function AccessibleTable() {
         <caption>A basic table example with a caption</caption>
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>№ Аудитории</TableCell>
+            <TableCell align="right">Группа</TableCell>
+            <TableCell align="right">Время</TableCell>
+            <TableCell align="right">Пара</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
