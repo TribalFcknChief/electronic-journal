@@ -1,22 +1,23 @@
-import { Box, Divider} from "@mui/material";
+import { Box, Button, Divider, Typography } from "@mui/material";
 import MenuStyled from "../../components/StyledMenu";
-import { DataBox, HeadBox, ProfilePageWrapper} from "./style";
+import { DataBox, HeadBox, ProfilePageWrapper } from "../ProfilePage/style";
 import { StyledHeader } from "../../components/StyledHeader";
+import { CalendarIcon } from "@mui/x-date-pickers/icons";
 import { StyledTypography } from "../RegistrationPage/style";
-import SelectTextFields from "./components/StyledTextFieldList";
-import { StyledProfileTextField } from "./components/StyledProfileTextField";
-import { LockOpenIcon } from "./svg/lockOpenIcon";
-import { MailIcon } from "./svg/mailIcon";
-import { PhoneIcon } from "./svg/phoneIcon";
-import { StyledProfileMultilineTextField } from "./components/StyledProfileMultilineTextField";
-import { PlusCircleIcon } from "./svg/plusCircleIcon";
-import { CalendarIcon } from "./svg/calendarIcon";
-import { UserIcon } from "./svg/userIcon";
-import { PersonalDataIcon} from "./svg/workersIcon";
-import { WorksDataIcon } from "./svg/worksDataIcon";
-import {CustomAvatar} from "./components/Avatar";
+import { UserIcon } from "../ProfilePage/svg/userIcon";
+import { StyledProfileTextField } from "../ProfilePage/components/StyledProfileTextField";
+import { PhoneIcon } from "../ProfilePage/svg/phoneIcon";
+import { MailIcon } from "../ProfilePage/svg/mailIcon";
+import { LockOpenIcon } from "../ProfilePage/svg/lockOpenIcon";
+import { PlusCircleIcon } from "../ProfilePage/svg/plusCircleIcon";
+import { StyledProfileMultilineTextField } from "../ProfilePage/components/StyledProfileMultilineTextField";
+import { PersonalDataIcon } from "../ProfilePage/svg/workersIcon";
+import SelectTextFields from "../ProfilePage/components/StyledTextFieldList";
+import { WorksDataIcon } from "../ProfilePage/svg/worksDataIcon";
+import { Padding } from "@mui/icons-material";
+import { CustomAvatar } from "../ProfilePage/components/Avatar";
 
-export const ProfilePage = () => {
+export const StudentProfilePage = () => {
   return (
     <ProfilePageWrapper>
       <StyledHeader></StyledHeader>
@@ -49,8 +50,16 @@ export const ProfilePage = () => {
             borderRadius: "12px",
           }}
         >
-          <Box sx={{display:"flex",flexDirection:"row", height:"50px",alignItems:"center", marginLeft:"20px"}}>
-            <CalendarIcon/>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              height: "50px",
+              alignItems: "center",
+              marginLeft: "20px",
+            }}
+          >
+            <CalendarIcon />
             <StyledTypography
               sx={{
                 fontSize: "20px",
@@ -88,14 +97,18 @@ export const ProfilePage = () => {
             >
               <HeadBox>
                 <Box ml={2}>
-                  <UserIcon/>
+                  <UserIcon />
                 </Box>
-                <StyledTypography sx={{color:"#ffff", marginLeft:"10px", fontSize:"15px"}}>Аккаунт</StyledTypography>
+                <StyledTypography
+                  sx={{ color: "#ffff", marginLeft: "10px", fontSize: "15px" }}
+                >
+                  Аккаунт
+                </StyledTypography>
               </HeadBox>
               <Box sx={{mt:"20px"}}>
                 <CustomAvatar name="Иванов Иван" size={78} />
               </Box>
-              <Box sx={{display:"flex", flexDirection:"column",justifyContent:"space-around", height:"64%"}}>
+              <Box>
                 <StyledTypography>Телефон *</StyledTypography>
                 <StyledProfileTextField
                   icon={<PhoneIcon />}
@@ -111,16 +124,12 @@ export const ProfilePage = () => {
                   placeholder="********"
                   icon={<LockOpenIcon />}
                 />
-                <StyledTypography>Трудовой стаж *</StyledTypography>
-                <StyledProfileMultilineTextField
-                  icon={<PlusCircleIcon />}
-                  placeholder="Заведующий кафедрой ядерной физики, 10 лет"
-                />
+                <StyledTypography>ЭЭЭээээ *</StyledTypography>
               </Box>
             </DataBox>
             <Box
               sx={{
-                width: "584px",
+                width: "620px",
                 height: "90%",
                 display: "flex",
                 flexDirection: "column",
@@ -128,15 +137,32 @@ export const ProfilePage = () => {
                 marginRight: "70px",
               }}
             >
-              <DataBox sx={{ width: "100%", height: "48%" }}>
+              <DataBox
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center"
+                }}
+              >
                 <HeadBox>
                   <Box ml={2}>
-                    <PersonalDataIcon/>
+                    <PersonalDataIcon />
                   </Box>
-                  <StyledTypography sx={{color:"#ffff", marginLeft:"10px", fontSize:"15px"}}>Персональные данные</StyledTypography>
+                  <StyledTypography
+                    sx={{
+                      color: "#ffff",
+                      marginLeft: "10px",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Персональные данные
+                  </StyledTypography>
                 </HeadBox>
                 <Box
                   sx={{
+                    width: "100%",
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-around",
@@ -157,30 +183,46 @@ export const ProfilePage = () => {
                     <SelectTextFields />
                   </Box>
                 </Box>
-              </DataBox>
-              <DataBox sx={{ width: "100%", height: "48%" }}>
-                <HeadBox>
-                  <Box ml={2}>
-                    <WorksDataIcon/>
-                  </Box>
-                  <StyledTypography sx={{color:"#ffff", marginLeft:"10px", fontSize:"15px"}}>Данные о работе</StyledTypography>
-                </HeadBox>
+                //стилизовать
                 <Box
                   sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-around",
-                    paddingTop: "5%",
+                    borderRadius: "12px",
+                    border: "1px solid #c9c5c7",
+                    width: "90%",
+                    height: "30%",
                   }}
                 >
-                  <Box>
-                    <StyledTypography>Должности *</StyledTypography>
-                    <StyledProfileMultilineTextField />
-                  </Box>
-                  <Box>
-                    <StyledTypography>Группы</StyledTypography>
-                    <StyledProfileMultilineTextField />
-                  </Box>
+                  <StyledTypography sx={{color:"#c9c5c7", fontSize:"18px"}}>Группа:</StyledTypography>
+                  <StyledTypography sx={{color:"#c9c5c7", fontSize:"18px"}}>Куратор:</StyledTypography>
+                  <StyledTypography sx={{color:"#c9c5c7", fontSize:"18px"}}>Направление:</StyledTypography>
+                </Box>
+                <Box sx={{width:"90%", display:"flex", flexDirection:"row", justifyContent:"space-between", marginTop:"80px"}}>
+                  <Button
+                    sx={{
+                      width: "300px",
+                      height: "40px",
+                      background: "#267AFC",
+                      borderRadius: "12px",
+                    }}
+                    variant="contained"
+                  >
+                    <StyledTypography sx={{ color: "white" }}>
+                      Перейти к списку курсов
+                    </StyledTypography>
+                  </Button>
+                  <Button
+                    sx={{
+                      width: "220px",
+                      height: "40px",
+                      background: "#267AFC",
+                      borderRadius: "12px",
+                    }}
+                    variant="contained"
+                  >
+                    <StyledTypography sx={{ color: "white" }}>
+                      Просмотр расписания
+                    </StyledTypography>
+                  </Button>
                 </Box>
               </DataBox>
             </Box>

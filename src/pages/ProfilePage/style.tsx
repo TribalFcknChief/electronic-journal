@@ -9,18 +9,18 @@ export const ProfilePageWrapper = styled(Grid2)(() => ({
 
 export const DataBox = styled(Box)(() => ({
   border: "1.5px solid #7D8797",
-  borderRadius: "12px",
+  borderRadius: "13px",
 }));
 
 export const HeadBox = styled(Box)(() => ({
   width: "100%",
-  height: "34px",
+  height: "40px",
   display:"flex",
   flexDirection:"row",
-  borderRadius: "10px",
+  borderRadius: "12px 12px 0px 0px",
   background: "#267AFC",
   alignItems: "flex-start",
-  paddingTop:"4px"
+  paddingTop:"6px"
 }));
 
 export const StyledTextField = styled(TextField)(() => ({

@@ -106,7 +106,7 @@ function BasicSimpleTreeView() {
                 alignContent: "center",
               }}
             >
-              Посещаемость
+              Успеваемость
               <AttendanceIcon />
             </Box>
           }

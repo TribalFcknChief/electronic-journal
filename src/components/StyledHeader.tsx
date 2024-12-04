@@ -3,7 +3,7 @@ import { StyledTypography } from "../pages/RegistrationPage/style";
 import { SettingsIcon } from "../pages/ProfilePage/svg/settingsIcon";
 import { LogoutIcon } from "../pages/ProfilePage/svg/logoutIcon";
 import { NotificationIcon } from "../pages/ProfilePage/svg/notificationIcon";
-import BackgroundLetterAvatars from "../pages/ProfilePage/components/Avatar";
+import { CustomAvatar } from "../pages/ProfilePage/components/Avatar";
 
 
 export const StyledHeader = () => {
@@ -29,7 +29,7 @@ export const StyledHeader = () => {
             marginLeft: "50px",
           }}
         >
-          <BackgroundLetterAvatars/>
+          <CustomAvatar name="Иванов Иван" size={40}/>
           <StyledTypography
             sx={{ fontWeight: "600", color: "#343333", fontSize: "14px", marginLeft:"20px" }}
           >

@@ -7,6 +7,8 @@ import { ProfilePage } from "./pages/ProfilePage/ProfilePage.tsx";
 import { GroupsPage } from "./pages/GroupsPage/GroupsPage.tsx";
 import {StudentsPage} from "./pages/StudentsPage/StudentsPage.tsx"
 import { ShedulePage } from "./pages/ShedulePage/ShedulePage.tsx";
+import { ProgressPage } from "./pages/ProgressPage/ProgressPage.tsx";
+import { StudentProfilePage } from "./pages/StudentProfilePage/StudentProfilePage.tsx";
 
 function App() {
   const [socket, setSocket] = useState<Socket | null>(null);
@@ -32,6 +34,8 @@ function App() {
       <Route path="/groups" element={<GroupsPage />}></Route>
       <Route path="/students" element={<StudentsPage />}></Route>
       <Route path="/shedule" element={<ShedulePage/>}></Route>
+      <Route path="/progress" element={<ProgressPage/>}></Route>
+      <Route path="/student" element={<StudentProfilePage/>}></Route>
     </Routes>
   );
 }
