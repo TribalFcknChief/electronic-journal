@@ -1,14 +1,15 @@
-import { Box, Divider} from "@mui/material";
+import { ProgressPageWrapper } from "./style";
+import { Box, Button, Divider } from "@mui/material";
 import MenuStyled from "../../components/StyledMenu";
-import {  ShedulePageWrapper} from "./style";
 import { StyledHeader } from "../../components/StyledHeader";
 import { StyledTypography } from "../RegistrationPage/style";
-import { CalendarIcon } from "../ProfilePage/svg/calendarIcon";
-import CalendarWithTable from "./Calendar";
+import { CalendarIcon } from "../ProfilePage/svg/calendarIcon.tsx";
+import DataTable from "./components/ProgressTable.tsx";
 
-export const ShedulePage = () => {
+
+export const ProgressPage = () => {
   return (
-    <ShedulePageWrapper>
+    <ProgressPageWrapper>
       <StyledHeader></StyledHeader>
       <Box
         sx={{
@@ -51,7 +52,7 @@ export const ShedulePage = () => {
                 marginBottom: "20px",
               }}
             >
-              Расписание
+              Успеваемость
             </StyledTypography>
           </Box>
           <Divider
@@ -59,10 +60,10 @@ export const ShedulePage = () => {
             sx={{ marginTop: "10px", marginBottom: "10px" }}
           ></Divider>
            <Box sx={{display:"flex", flexDirection:"row"}}>
-              <CalendarWithTable/>
+              <DataTable></DataTable>
            </Box>
          </Box>
       </Box>
-    </ShedulePageWrapper>
+    </ProgressPageWrapper>
   );
 };

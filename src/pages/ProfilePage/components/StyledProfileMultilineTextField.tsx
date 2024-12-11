@@ -15,7 +15,7 @@ export const StyledProfileMultilineTextField: FC<Props> = ({
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": { m: 1, width: "250px", background: "#F6F6F6" },
+        "& .MuiTextField-root": { width: "250px", background: "#F6F6F6" },
       }}
       noValidate
       autoComplete="off"

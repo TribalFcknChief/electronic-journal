@@ -52,8 +52,8 @@ const CalendarWithTable = () => {
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
         <DialogTitle><StyledTypography>Выберите действие</StyledTypography></DialogTitle>
         <DialogContent sx={{display:"flex", justifyContent:"space-around", width:"480px"}}>
-          <Button onClick={() => { setViewingEvents(false); }} variant="contained" color="primary">Добавить событие</Button>
-          <Button onClick={() => { setViewingEvents(true); }} variant="contained">Посмотреть событие</Button>
+          <Button onClick={() => { setViewingEvents(false); setDialogOpen(false);}} variant="contained" color="primary">Добавить событие</Button>
+          <Button onClick={() => { setViewingEvents(true); setDialogOpen(false);}} variant="contained">Посмотреть событие</Button>
         </DialogContent>
       </Dialog>
 
